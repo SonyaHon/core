@@ -17,14 +17,16 @@ module.exports = {
   target: 'node',
   mode: ENV,
   plugins: [
-    new webpack.ProvidePlugin({
+    new webpack.DefinePlugin({
+      LOGS_TYPE_LOG: 0,
+      LOGS_TYPE_WARN: 1,
+      LOGS_TYPE_ERROR: 2,
     }),
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -37,5 +39,9 @@ module.exports = {
         },
       },
     ],
+  },
+  resolve: {
+    alias: {
+    },
   },
 };
