@@ -10,6 +10,7 @@ import Creators from '../creators';
 import ConnectionManager from './connection-manager';
 import Logger from '../logger';
 import socketHandShake from './socket-handshake';
+import Decorators from '../decorators';
 
 class Endpoint extends Events {
   constructor(props) {
@@ -18,7 +19,7 @@ class Endpoint extends Events {
     this.connectionManager = new ConnectionManager(this);
     this.expressApp = express();
     this.http = HTTP.Server(this.expressApp);
-    this.io = IO(this.http, { serveClient: false });
+    this.io = IO(this.http, {serveClient: false});
     // TODO generation with webpack
     this.expressApp.get('/', (req, res) => {
       res.send(Creators.dotHTML(this.props.name));
@@ -42,7 +43,10 @@ class Endpoint extends Events {
       description: this.props.description,
       source: 'endpoint',
     };
+
+    // TODO: Parse @remote decorators stuff and update info
   }
+
 
   goSilent() {
     this.mode = 'silent';
@@ -69,6 +73,11 @@ class Endpoint extends Events {
     this.http.listen(this.props.port, () => {
       this.logger.log(`Endpoint ${this.props.name} has started. http://localhost:${this.props.port} || http://${ip.address()}:${this.props.port}`);
     });
+  }
+
+  @Decorators.remote({bool: true})
+  testMethod() {
+    console.log(`Kek: ${this.props.name}`);
   }
 }
 
