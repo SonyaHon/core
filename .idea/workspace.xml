@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6f3fc7-4605-49fd-915f-189bfbb01dfb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/playground.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/creators/local-endpoint-instance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/creators/local-endpoint-instance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/net/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/net/connection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/net/endpoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/net/endpoint.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="endpoint.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lib/net/endpoint.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="770">
+              <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
                 <element signature="n#!!block;n#goOffline#0;n#Endpoint#0" />
@@ -294,12 +291,12 @@
       <updated>1547404679834</updated>
       <workItem from="1547404681147" duration="5301000" />
       <workItem from="1547473225650" duration="15008000" />
-      <workItem from="1547637566231" duration="9606000" />
+      <workItem from="1547637566231" duration="9756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29915000" />
+    <option name="totallyTimeSpent" value="30065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-617" width="2560" height="1417" extended-state="6" />
@@ -618,8 +615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/net/endpoint.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        <state relative-caret-position="770">
+          <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <element signature="n#!!block;n#goOffline#0;n#Endpoint#0" />

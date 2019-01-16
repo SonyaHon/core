@@ -19,7 +19,7 @@ class Endpoint extends Events {
     this.connectionManager = new ConnectionManager(this);
     this.expressApp = express();
     this.http = HTTP.Server(this.expressApp);
-    this.io = IO(this.http, {serveClient: false});
+    this.io = IO(this.http, { serveClient: false });
     // TODO generation with webpack
     this.expressApp.get('/', (req, res) => {
       res.send(Creators.dotHTML(this.props.name));
@@ -46,8 +46,8 @@ class Endpoint extends Events {
     };
     const self = this;
     setTimeout(() => {
-      const remotes = Object.keys(self).filter((prop) => prop.match(/remote@@.*/));
-      for (let i = 0; i < remotes.length; i++) {
+      const remotes = Object.keys(self).filter(prop => prop.match(/remote@@.*/));
+      for (let i = 0; i < remotes.length; i += 1) {
         const c = remotes[i];
         const key = c.substring(8);
         self.info.methods[key] = self[c];
