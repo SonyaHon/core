@@ -7,11 +7,16 @@ class Connection extends Events {
     this.uuid = uuid();
     this.endpoint = endpoint;
     this.socket = socket;
+    this.socket.on('--METHOD--CALL--', (options) => {
+
+    });
   }
 
   getUUID() {
     return this.uuid;
   }
+
+  broadcast(name, args) {}
 }
 
 export default Connection;

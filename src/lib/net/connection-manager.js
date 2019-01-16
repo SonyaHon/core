@@ -8,6 +8,11 @@ class ConnectionManager extends Events {
     super();
     this.endpoint = endpoint;
     this.connections = [];
+    this.on('broadcast-event', (name, args) => {
+      this.connections.forEach((connection) => {
+        connection.broadcast(name, args);
+      });
+    });
   }
 
   async addSocketConnection(socket) {

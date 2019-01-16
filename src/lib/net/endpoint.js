@@ -83,9 +83,8 @@ class Endpoint extends Events {
     });
   }
 
-  @Decorators.remote({bool: true})
-  testMethod() {
-    console.log(`Kek: ${this.props.name}`);
+  fire(event, ...args) {
+    this.connectionManager.emit('broadcast-event', event, args);
   }
 }
 
