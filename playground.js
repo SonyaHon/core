@@ -5,14 +5,18 @@ const endpoint = new Core.net.Endpoint({
   name: 'Test',
 });
 
-endpoint.start();
-
-
 const endpoint2 = new Core.net.Endpoint({
   port: 8081,
   name: 'Test3',
 });
 
-endpoint2.start();
+(async () => {
+  await endpoint.start();
+  await endpoint2.start();
+  const session = await endpoint2.connectToEndpointViaSocket('http://localhost:8080');
+  session.subscribe('lol', (arg, arg2,arg3) => {
+    console.log('on event:', arg, arg2, arg3);
+  });
+  console.log('read', await session.testMethod(' world'));
 
-endpoint2.connectToEndpointViaSocket('http://localhost:8080');
+})();

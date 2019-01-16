@@ -10,7 +10,7 @@ import Creators from '../creators';
 import ConnectionManager from './connection-manager';
 import Logger from '../logger';
 import socketHandShake from './socket-handshake';
-import Decorators from '../decorators';
+import task from '../async/task';
 
 class Endpoint extends Events {
   constructor(props) {
@@ -78,9 +78,8 @@ class Endpoint extends Events {
   }
 
   async start() {
-    this.http.listen(this.props.port, () => {
-      this.logger.log(`Endpoint ${this.props.name} has started. http://localhost:${this.props.port} || http://${ip.address()}:${this.props.port}`);
-    });
+    await task(this.http, 'listen', this.props.port);
+    this.logger.log(`Endpoint ${this.props.name} has started. http://localhost:${this.props.port} || http://${ip.address()}:${this.props.port}`);
   }
 
   fire(event, ...args) {
