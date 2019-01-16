@@ -1,8 +1,12 @@
 import task from '../async/task';
+import localServiceInstance from './local-service-instance';
 
 async function call(sock, settings) {
   sock.emit('--METHOD--CALL--', settings);
   const res = await task(sock, 'on', '--METHOD--CALL--RESULT--');
+  if (res[1] && res[1] === '--SERVICE--INFO--') {
+    return localServiceInstance(sock, res[0]);
+  }
   return res[0];
 }
 
@@ -12,7 +16,7 @@ export default (socket, settings) => {
     res[method] = async (...args) => call(socket, {
       id: settings.id,
       args,
-      options: settings.info.methods[method],
+      service: !!settings.info.methods[method].service,
       method,
     });
   });

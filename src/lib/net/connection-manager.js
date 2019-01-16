@@ -13,6 +13,11 @@ class ConnectionManager extends Events {
         connection.broadcast(name, args);
       });
     });
+    this.on('broadcast-event-from-service', (name, event, args) => {
+      this.connections.forEach((connection) => {
+        connection.broadcastFromService(name, event, args);
+      });
+    });
   }
 
   async addSocketConnection(socket) {

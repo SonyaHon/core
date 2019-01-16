@@ -10,13 +10,8 @@ const endpoint2 = new Core.net.Endpoint({
   name: 'Test3',
 });
 
+const service = new Core.service.BaseService('kek');
+
 (async () => {
   await endpoint.start();
-  await endpoint2.start();
-  const session = await endpoint2.connectToEndpointViaSocket('http://localhost:8080');
-  session.subscribe('lol', (arg, arg2,arg3) => {
-    console.log('on event:', arg, arg2, arg3);
-  });
-  console.log('read', await session.testMethod(' world'));
-
 })();

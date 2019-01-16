@@ -11,11 +11,13 @@ import ConnectionManager from './connection-manager';
 import Logger from '../logger';
 import socketHandShake from './socket-handshake';
 import task from '../async/task';
+import Decorators from '../decorators';
 
 class Endpoint extends Events {
   constructor(props) {
     super();
     this.props = props;
+    this.connectedServices = {};
     this.connectionManager = new ConnectionManager(this);
     this.expressApp = express();
     this.http = HTTP.Server(this.expressApp);
@@ -84,6 +86,33 @@ class Endpoint extends Events {
 
   fire(event, ...args) {
     this.connectionManager.emit('broadcast-event', event, args);
+  }
+
+  addServiceInstance(serviceInstance) {
+    if (!this.connectedServices[serviceInstance.name]) {
+      serviceInstance._bindToEndpoint(this);
+      this.connectedServices[serviceInstance.name] = serviceInstance;
+    }
+  }
+
+  removeServiceInstance(serviceInstance) {
+    if (this.connectedServices[serviceInstance.name]) {
+      serviceInstance._bindToEndpoint(null);
+      delete this.connectedServices[serviceInstance.name];
+    }
+  }
+
+  _broadcastFromService(name, event, args) {
+    this.connectionManager.emit('broadcast-event-from-service', name, event, args);
+  }
+
+  async _callServiceMethod(opts) {
+    return (this.connectedServices[opts.service])[opts.method](...opts.args);
+  }
+
+  @Decorators.remote({service: true})
+  async getService(name) {
+    return this.connectedServices[name].info;
   }
 }
 
