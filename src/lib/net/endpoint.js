@@ -42,11 +42,19 @@ class Endpoint extends Events {
       name: this.props.name,
       description: this.props.description,
       source: 'endpoint',
+      methods: {},
     };
-
-    // TODO: Parse @remote decorators stuff and update info
+    const self = this;
+    setTimeout(() => {
+      const remotes = Object.keys(self).filter((prop) => prop.match(/remote@@.*/));
+      for (let i = 0; i < remotes.length; i++) {
+        const c = remotes[i];
+        const key = c.substring(8);
+        self.info.methods[key] = self[c];
+        delete self[c];
+      }
+    }, 0);
   }
-
 
   goSilent() {
     this.mode = 'silent';
