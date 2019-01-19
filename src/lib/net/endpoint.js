@@ -11,6 +11,7 @@ import ConnectionManager from './connection-manager';
 import Logger from '../logger';
 import socketHandShake from './socket-handshake';
 import task from '../async/task';
+import buildEntry from './buildEntry';
 import Decorators from '../decorators';
 
 class Endpoint extends Events {
@@ -23,13 +24,21 @@ class Endpoint extends Events {
     this.http = HTTP.Server(this.expressApp);
     this.io = IO(this.http, { serveClient: false });
     // TODO generation with webpack
+    buildEntry('d:/workspace/core/src/lib/404-entry/entry.js');
     this.expressApp.get('/', (req, res) => {
       res.send(Creators.dotHTML(this.props.name));
     });
-    // TODO: move this to generation with webpack
+    if (!this.props.status || this.props.status === 'development') {
+      this.expressApp.get('/bundle.js', (req, res) => {
+
+      });
+    } else {
+
+    }
+   /* // TODO: move this to generation with webpack
     this.expressApp.get('/io-client', (req, res) => {
       res.sendFile(path.join('d:/workspace/core/node_modules/socket.io-client/dist/socket.io.js'));
-    });
+    });*/
     this.io.on('connection', (sock) => {
       this.connectionManager.addSocketConnection(sock);
     });

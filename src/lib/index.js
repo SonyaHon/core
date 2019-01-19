@@ -12,4 +12,9 @@ export default {
   reactive,
   Logger,
   service,
+  ONLINE: 'online',
+  OFFLINE: 'offline',
+  SILENT: 'silent',
+  DEV: 'development',
+  PROD: 'production',
 };
