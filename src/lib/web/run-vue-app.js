@@ -6,6 +6,7 @@ Vue.use(Vuetify);
 Vue.use(VuePlugin);
 
 import 'vuetify/dist/vuetify.min.css';
+import './common.css';
 import 'material-icons/iconfont/material-icons.css';
 
 

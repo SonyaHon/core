@@ -2,7 +2,7 @@
     <div class="page404">
     <v-card class="mx-auto" max-width="400">
         <v-card-title><span class="title">Oops...</span></v-card-title>
-        <v-card-text>We could not load this page <br> so <b>404</b> is shown, sry =(</v-card-text>
+        <v-card-text class="headline">We could not load this page <br> so <b>404</b> is shown, sry =(</v-card-text>
     </v-card>
     </div>
 </template>

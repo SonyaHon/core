@@ -29,11 +29,16 @@ class Endpoint extends Events {
     });
     if (!this.props.status || this.props.status === 'development') {
       this.expressApp.get('/bundle.js', async (req, res) => {
-        const bundle = await buildEntry('d:/workspace/core/src/lib/404-entry/entry.js');
+        const bundle = await buildEntry(props.entry || path.join(__dirname, '../404-entry/entry.js'));
         res.send(bundle);
       });
     } else {
-
+      (async () => {
+        const bundle = await buildEntry(props.entry || path.join(__dirname, '../404-entry/entry.js'));
+        this.expressApp.get('/bundle.js', (req, res) => {
+          res.send(bundle);
+        });
+      })();
     }
     this.io.on('connection', (sock) => {
       this.connectionManager.addSocketConnection(sock);
