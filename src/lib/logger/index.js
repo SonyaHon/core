@@ -1,7 +1,9 @@
 const moment = require('moment');
+const Events = require('events')
 
-class Logger {
+class Logger extends Events {
   constructor(props) {
+    super();
     this.currentSessionLogs = [];
     this.props = props;
   }
@@ -21,6 +23,9 @@ class Logger {
     if (this.props.console) {
       console.log(obj.text);
     }
+    if (this.props.infoService) {
+      this.emit('log-evt', obj);
+    }
   }
 
   warn(msg) {
@@ -30,6 +35,9 @@ class Logger {
     if (this.props.console) {
       console.warn(obj.text);
     }
+    if (this.props.infoService) {
+      this.emit('log-evt', obj);
+    }
   }
 
   error(msg) {
@@ -38,6 +46,9 @@ class Logger {
     this.currentSessionLogs.push(obj);
     if (this.props.console) {
       console.error(obj.text);
+    }
+    if (this.props.infoService) {
+      this.emit('log-evt', obj);
     }
   }
 }

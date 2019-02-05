@@ -29,6 +29,7 @@ class Connection extends Events {
       }
     });
     this.socket.on('--SUBSCRIBE--TO--SERVICE--EVENT--', (serviceName, event) => {
+      console.log(serviceName, event);
       if (this.subscribedEvents.indexOf(`${serviceName}.${event}`) === -1) {
         this.subscribedEvents.push(`${serviceName}.${event}`);
       }
