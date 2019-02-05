@@ -1,11 +1,12 @@
 import Vue from 'vue';
-import Vuesax from 'vuesax';
-import 'vuesax/dist/vuesax.css';
-import 'material-icons/iconfont/material-icons.css';
+import Vuetify from 'vuetify';
 import VuePlugin from './vue-plugin';
 
-Vue.use(Vuesax);
+Vue.use(Vuetify);
 Vue.use(VuePlugin);
+
+import 'vuetify/dist/vuetify.min.css';
+import 'material-icons/iconfont/material-icons.css';
 
 
 export default (app) => {

@@ -24,21 +24,6 @@ module.exports = function (entry) {
         {
           test: /\.vue$/,
           loader: 'vue-loader',
-          options: {
-            loaders: {
-              sass: [
-                {
-                  loader: 'css-loader',
-                },
-                {
-                  loader: 'sass-loader',
-                  options: {
-                    indentedSyntax: false, // Set to true to use indented SASS syntax.
-                  },
-                },
-              ],
-            },
-          },
         },
         {
           test: /\.js$/,
@@ -51,7 +36,10 @@ module.exports = function (entry) {
         },
         {
           test: /\.css$/,
-          loader: 'css-loader',
+          use: [
+            'vue-style-loader',
+            'css-loader',
+          ],
         },
         {
           test: /\.(png|jpg|gif|svg|ttf|woff|woff2|eot)$/,
@@ -62,10 +50,6 @@ module.exports = function (entry) {
         },
       ],
     },
-    resolve: {
-      alias: {
-        vue$: 'vue/dist/vue.esm.js',
-      },
-    },
+
   };
 };

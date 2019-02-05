@@ -9,6 +9,7 @@ module.exports = async function conf(entry) {
   const compiler = webpack(config);
   compiler.outputFileSystem = fs;
   const res = await async.task(compiler, 'run');
+  console.log(res[0], res[1].toJson('minimal'));
   if (!res[0] && !res[1].hasErrors()) {
     return fs.readFileSync('/bundle.js');
   }

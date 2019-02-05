@@ -4,32 +4,11 @@
     <list default="true" id="7f6f3fc7-4605-49fd-915f-189bfbb01dfb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/webpack.config.build.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/webpack.config.build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/webpack.config.node-lib.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/webpack.config.web-lib.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/404-entry/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/404-entry/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/async/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/async/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/async/sleep.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/async/sleep.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/async/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/async/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/creators/dot-html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/creators/dot-html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/creators/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/creators/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/creators/local-endpoint-instance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/creators/local-endpoint-instance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/creators/local-service-instance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/creators/local-service-instance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/decorators/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/logger/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/logger/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/net/buildEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/net/buildEntry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/net/connection-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/net/connection-manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/net/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/net/connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/net/endpoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/net/endpoint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/net/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/net/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/net/socket-handshake.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/net/socket-handshake.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reactive/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reactive/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/service/base-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/service/base-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/web/vue-plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/web/vue-plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/web/run-vue-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/web/run-vue-app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,19 +31,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/net/connection-manager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="23" column="77" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lib/web/vue-plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="391">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -82,19 +52,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/net/connection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -113,19 +74,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/webpack.config.build.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="518">
+              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/404-entry/app.vue">
+        <entry file="file://$PROJECT_DIR$/src/lib/web/run-vue-app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#132#141#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lib/404-entry/app.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/vuesax/dist/vuesax.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -172,7 +151,6 @@
         <option value="$PROJECT_DIR$/src/lib/404-entry/entry.js" />
         <option value="$PROJECT_DIR$/src/lib/creators/dot-html.js" />
         <option value="$PROJECT_DIR$/src/lib/web/index.js" />
-        <option value="$PROJECT_DIR$/src/lib/web/run-vue-app.js" />
         <option value="$PROJECT_DIR$/src/lib/index.js" />
         <option value="$PROJECT_DIR$/src/lib/creators/buildEntry.js" />
         <option value="$PROJECT_DIR$/src/lib/creators/index.js" />
@@ -202,15 +180,16 @@
         <option value="$PROJECT_DIR$/src/lib_/net/endpoint.js" />
         <option value="$PROJECT_DIR$/src/lib/logger/index.js" />
         <option value="$PROJECT_DIR$/src/lib/creators/local-service-instance.js" />
-        <option value="$PROJECT_DIR$/src/lib/net/buildEntry.js" />
-        <option value="$PROJECT_DIR$/configs/webpack.config.build.js" />
-        <option value="$PROJECT_DIR$/src/lib/404-entry/app.vue" />
         <option value="$PROJECT_DIR$/src/lib/net/socket-handshake.js" />
         <option value="$PROJECT_DIR$/src/lib/async/task.js" />
         <option value="$PROJECT_DIR$/src/lib/net/endpoint.js" />
         <option value="$PROJECT_DIR$/playground.js" />
         <option value="$PROJECT_DIR$/src/lib/net/connection-manager.js" />
         <option value="$PROJECT_DIR$/src/lib/web/vue-plugin.js" />
+        <option value="$PROJECT_DIR$/src/lib/net/buildEntry.js" />
+        <option value="$PROJECT_DIR$/src/lib/web/run-vue-app.js" />
+        <option value="$PROJECT_DIR$/configs/webpack.config.build.js" />
+        <option value="$PROJECT_DIR$/src/lib/404-entry/app.vue" />
       </list>
     </option>
   </component>
@@ -367,7 +346,7 @@
       <workItem from="1547668552411" duration="6832000" />
       <workItem from="1547893634611" duration="5969000" />
       <workItem from="1549380220478" duration="201000" />
-      <workItem from="1549380434721" duration="7741000" />
+      <workItem from="1549380434721" duration="9356000" />
     </task>
     <task id="LOCAL-00001" summary="add get service method, and create base-service class">
       <created>1547673750952</created>
@@ -390,11 +369,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547900312833</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="redo to es2015 cause of babel-errors, finish vue plugin">
+      <created>1549388265728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1549388265728</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50808000" />
+    <option name="totallyTimeSpent" value="52423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -446,12 +432,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add get service method, and create base-service class" />
     <MESSAGE value="start web" />
-    <option name="LAST_COMMIT_MESSAGE" value="start web" />
+    <MESSAGE value="redo to es2015 cause of babel-errors, finish vue plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="redo to es2015 cause of babel-errors, finish vue plugin" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lib_/штвуч.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/async/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -652,16 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/web/run-vue-app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/web/vue-plugin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -726,27 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/net/buildEntry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/webpack.config.build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/404-entry/app.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/creators/local-endpoint-instance.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -792,7 +745,7 @@
     <entry file="file://$PROJECT_DIR$/src/lib/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -810,13 +763,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/vuesax/dist/vuesax.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/web/vue-plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="391">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/net/buildEntry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/web/run-vue-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#132#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/webpack.config.build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/404-entry/app.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
