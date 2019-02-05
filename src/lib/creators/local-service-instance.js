@@ -1,4 +1,4 @@
-import task from '../async/task';
+const task = require('../async/task');
 
 async function call(sock, settings) {
   sock.emit('--SERVICE--METHOD--CALL--', settings);
@@ -6,7 +6,7 @@ async function call(sock, settings) {
   return res[0];
 }
 
-export default (socket, settings) => {
+module.exports = function localServiceInstance(socket, settings) {
   const res = {};
   Object.keys(settings.methods).forEach((method) => {
     res[method] = (...args) => call(socket, {

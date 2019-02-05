@@ -1,8 +1,8 @@
-import dotHTML from './dot-html';
-import localEndpointInstance from './local-endpoint-instance';
-import localServiceInstance from './local-service-instance';
+const dotHTML = require('./dot-html');
+const localEndpointInstance = require('./local-endpoint-instance');
+const localServiceInstance = require('./local-service-instance');
 
-export default {
+module.exports = {
   dotHTML,
   localEndpointInstance,
   localServiceInstance,

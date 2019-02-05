@@ -1,9 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
-
+const VueLoaderPlugin = require('vue-loader');
 module.exports = function (entry) {
   return {
-    entry,
+    entry: ['@babel/polyfill', entry],
     output: {
       path: '/',
       filename: 'bundle.js',
@@ -11,10 +11,11 @@ module.exports = function (entry) {
     target: 'web',
     mode: 'development',
     plugins: [
+      new VueLoaderPlugin.VueLoaderPlugin(),
       new webpack.DefinePlugin({
-        LOGS_TYPE_LOG: 0,
-        LOGS_TYPE_WARN: 1,
-        LOGS_TYPE_ERROR: 2,
+        LOGS_TYPE_LOG: 'log',
+        LOGS_TYPE_WARN: 'warn',
+        LOGS_TYPE_ERROR: 'error',
       }),
     ],
     devtool: 'eval',
@@ -44,7 +45,7 @@ module.exports = function (entry) {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['env'],
+              presets: ['@babel/preset-env'],
             },
           },
         },

@@ -1,13 +1,11 @@
-import async from './async';
-import decorators from './decorators';
-import net from './net';
-import reactive from './reactive';
-import Logger from './logger';
-import service from './service';
+const async = require('./async');
+const net = require('./net');
+const reactive = require('./reactive');
+const Logger = require('./logger');
+const service = require('./service');
 
-export default {
+module.exports = {
   async,
-  decorators,
   net,
   reactive,
   Logger,

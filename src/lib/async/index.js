@@ -1,7 +1,7 @@
-import sleep from './sleep';
-import task from './task';
+const sleep = require('./sleep');
+const task = require('./task');
 
-export default {
+module.exports = {
   sleep,
   task,
 };

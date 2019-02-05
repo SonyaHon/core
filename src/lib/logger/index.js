@@ -1,4 +1,4 @@
-import moment from 'moment';
+const moment = require('moment');
 
 class Logger {
   constructor(props) {
@@ -16,7 +16,7 @@ class Logger {
 
   log(msg) {
     const obj = Logger.createMessage(msg);
-    obj.type = LOGS_TYPE_LOG;
+    obj.type = 'log';
     this.currentSessionLogs.push(obj);
     if (this.props.console) {
       console.log(obj.text);
@@ -25,7 +25,7 @@ class Logger {
 
   warn(msg) {
     const obj = Logger.createMessage(msg);
-    obj.type = LOGS_TYPE_WARN;
+    obj.type = 'warn';
     this.currentSessionLogs.push(obj);
     if (this.props.console) {
       console.warn(obj.text);
@@ -34,7 +34,7 @@ class Logger {
 
   error(msg) {
     const obj = Logger.createMessage(msg);
-    obj.type = LOGS_TYPE_ERROR;
+    obj.type = 'error';
     this.currentSessionLogs.push(obj);
     if (this.props.console) {
       console.error(obj.text);
@@ -42,4 +42,4 @@ class Logger {
   }
 }
 
-export default Logger;
+module.exports = Logger;

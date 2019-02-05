@@ -1,18 +1,17 @@
-import Events from 'events';
-import IO from 'socket.io';
-import express from 'express';
-import HTTP from 'http';
-import path from 'path';
-import ip from 'ip';
-import IOCL from 'socket.io-client';
+const Events = require('events');
+const IO = require('socket.io');
+const express = require('express');
+const HTTP = require('http');
+const path = require('path');
+const ip = require('ip');
+const IOCL = require('socket.io-client');
 
-import Creators from '../creators';
-import ConnectionManager from './connection-manager';
-import Logger from '../logger';
-import socketHandShake from './socket-handshake';
-import task from '../async/task';
-import buildEntry from './buildEntry';
-import Decorators from '../decorators';
+const Creators = require('../creators');
+const ConnectionManager = require('./connection-manager');
+const Logger = require('../logger');
+const socketHandShake = require('./socket-handshake');
+const task = require('../async/task');
+const buildEntry = require('./buildEntry');
 
 class Endpoint extends Events {
   constructor(props) {
@@ -24,21 +23,18 @@ class Endpoint extends Events {
     this.http = HTTP.Server(this.expressApp);
     this.io = IO(this.http, { serveClient: false });
     // TODO generation with webpack
-    buildEntry('d:/workspace/core/src/lib/404-entry/entry.js');
+
     this.expressApp.get('/', (req, res) => {
       res.send(Creators.dotHTML(this.props.name));
     });
     if (!this.props.status || this.props.status === 'development') {
-      this.expressApp.get('/bundle.js', (req, res) => {
-
+      this.expressApp.get('/bundle.js', async (req, res) => {
+        const bundle = await buildEntry('d:/workspace/core/src/lib/404-entry/entry.js');
+        res.send(bundle);
       });
     } else {
 
     }
-   /* // TODO: move this to generation with webpack
-    this.expressApp.get('/io-client', (req, res) => {
-      res.sendFile(path.join('d:/workspace/core/node_modules/socket.io-client/dist/socket.io.js'));
-    });*/
     this.io.on('connection', (sock) => {
       this.connectionManager.addSocketConnection(sock);
     });
@@ -53,18 +49,10 @@ class Endpoint extends Events {
       name: this.props.name,
       description: this.props.description,
       source: 'endpoint',
-      methods: {},
+      methods: {
+        getService: { service: true },
+      },
     };
-    const self = this;
-    setTimeout(() => {
-      const remotes = Object.keys(self).filter(prop => prop.match(/remote@@.*/));
-      for (let i = 0; i < remotes.length; i += 1) {
-        const c = remotes[i];
-        const key = c.substring(8);
-        self.info.methods[key] = self[c];
-        delete self[c];
-      }
-    }, 0);
   }
 
   goSilent() {
@@ -119,10 +107,9 @@ class Endpoint extends Events {
     return (this.connectedServices[opts.service])[opts.method](...opts.args);
   }
 
-  @Decorators.remote({service: true})
   async getService(name) {
     return this.connectedServices[name].info;
   }
 }
 
-export default Endpoint;
+module.exports = Endpoint;

@@ -1,4 +1,4 @@
-export default async (ms) => {
+module.exports = async function sleep(ms) {
   const promise = new Promise((resolve) => {
     setTimeout(() => {
       resolve();

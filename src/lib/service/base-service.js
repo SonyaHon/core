@@ -1,25 +1,14 @@
-import Events from 'events';
+const Events = require('events');
 
 class BaseService extends Events {
-  constructor(name) {
-    super();
+  constructor(name, remoteMethods) {
+    super(remoteMethods);
     this.name = name;
     this.info = {
       name: this.name,
-      methods: {},
+      methods: remoteMethods || {},
     };
     this._endpoint = null;
-
-    const self = this;
-    setTimeout(() => {
-      const remotes = Object.keys(self).filter(prop => prop.match(/remote@@.*/));
-      for (let i = 0; i < remotes.length; i += 1) {
-        const c = remotes[i];
-        const key = c.substring(8);
-        self.info.methods[key] = self[c];
-        delete self[c];
-      }
-    }, 0);
   }
 
   _bindToEndpoint(endpoint) {
@@ -34,4 +23,4 @@ class BaseService extends Events {
   }
 }
 
-export default BaseService;
+module.exports = BaseService;

@@ -1,4 +1,4 @@
-const Core = require('./build/core.lib');
+const Core = require('./src/lib/');
 
 const endpoint = new Core.net.Endpoint({
   port: 8080,
@@ -6,7 +6,6 @@ const endpoint = new Core.net.Endpoint({
   description: 'Testing out web',
   mode: Core.ONLINE,
 });
-
 
 (async () => {
   await endpoint.start();

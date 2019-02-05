@@ -1,5 +1,5 @@
-import Events from 'events';
-import uuid from 'uuid/v1';
+const Events = require('events');
+const uuid = require('uuid/v1');
 
 class Connection extends Events {
   constructor(endpoint, socket) {
@@ -62,4 +62,4 @@ class Connection extends Events {
   }
 }
 
-export default Connection;
+module.exports = Connection;

@@ -1,7 +1,7 @@
-import Events from 'events';
-import Connection from './connection';
+const Events = require('events');
 
-import task from '../async/task';
+const Connection = require('./connection');
+const task = require('../async/task');
 
 class ConnectionManager extends Events {
   constructor(endpoint) {
@@ -42,4 +42,4 @@ class ConnectionManager extends Events {
   }
 }
 
-export default ConnectionManager;
+module.exports = ConnectionManager;

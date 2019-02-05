@@ -1,5 +1,5 @@
-import BaseService from './base-service';
+const BaseService = require('./base-service');
 
-export default {
+module.exports = {
   BaseService,
 };

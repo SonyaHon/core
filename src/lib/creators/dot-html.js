@@ -1,4 +1,5 @@
-export default title => `<!DOCTYPE html>
+module.exports = function dotHTML(title) {
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,3 +10,4 @@ export default title => `<!DOCTYPE html>
     <script src="bundle.js"></script>
 </body>
 </html>`;
+};

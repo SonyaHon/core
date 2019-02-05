@@ -1,7 +1,7 @@
-import Endpoint from './endpoint';
-import Connection from './connection';
+const Endpoint = require('./endpoint');
+const Connection = require('./connection');
 
-export default {
+module.exports = {
   Endpoint,
   Connection,
-}
+};
